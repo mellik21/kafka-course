@@ -1,4 +1,4 @@
-package com.github.mellik21.simple_example;
+package com.github.mellik21.simple.producer;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.producer.*;
@@ -7,10 +7,11 @@ import org.apache.kafka.common.serialization.StringSerializer;
 import java.util.Properties;
 import java.util.concurrent.ExecutionException;
 
+import static com.github.mellik21.util.ConstantKeeper.BOOTSTRAP_SERVERS;
+import static com.github.mellik21.util.ConstantKeeper.TOPIC_NAME;
+
 @Slf4j
 public class ProducerDemoKeys {
-    private static final String BOOTSTRAP_SERVERS = "127.0.0.1:9092";
-    private static final String TOPIC_NAME = "example_topic";
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         KafkaProducer<String, String> producer = createProducer();

@@ -1,4 +1,4 @@
-package com.github.mellik21.simple_example;
+package com.github.mellik21.simple.producer;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;

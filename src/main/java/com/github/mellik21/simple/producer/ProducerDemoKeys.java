@@ -17,7 +17,7 @@ public class ProducerDemoKeys {
         KafkaProducer<String, String> producer = createProducer();
 
         for (int i = 0; i < 10; i++) {
-            String value = "hello world #" + i;
+            String value = "HEY HEY #" + i;
             String key = "id_" + i;
 
             ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC_NAME, key, value);
